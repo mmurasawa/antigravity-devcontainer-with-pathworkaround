@@ -1,0 +1,15 @@
+{
+  "name": "Antigravity (Rocky 10)",
+  "dockerComposeFile": "./docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "vscode",
+  "features": {},
+  "customizations": {
+    "vscode": {}
+  },
+  "forwardPorts": [],
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind,readonly"
+  ]
+}

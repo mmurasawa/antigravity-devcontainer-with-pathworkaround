@@ -1,0 +1,12 @@
+services:
+  devcontainer:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ./antigravity_path_watcher.sh:/usr/local/bin/antigravity_path_watcher.sh
+      - ../:/workspace
+    working_dir: /workspace
+    user: vscode
+    command: /bin/sh -c "bash /usr/local/bin/antigravity_path_watcher.sh && sleep infinity"
+    network_mode: bridge
